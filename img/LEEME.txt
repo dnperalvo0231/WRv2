@@ -1,0 +1,8 @@
+Aquí van los gráficos descargados de OFM (formato .bmp; también se aceptan .png/.jpg).
+Nombres EXACTOS:
+  produccion_anual.bmp   -> sección 1 · Producción del año
+  presion_agua.bmp       -> sección 2 · Presión de inyección de agua
+  transferencia.bmp      -> sección 4 · Transferencia / entregas
+  logo.png               -> (opcional) logo de la empresa en el encabezado
+Para guardar el histórico de una semana, crea una carpeta con la fecha de FIN de semana,
+por ejemplo img/2026-11-05/produccion_anual.bmp. Esa semana mostrará su propia imagen.

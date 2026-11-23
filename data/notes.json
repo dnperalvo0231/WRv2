@@ -1,0 +1,80 @@
+{
+ "2026-10-23_2026-10-29": {
+  "notes": [
+   {
+    "tag": "Pozo",
+    "title": "SN-20 · aumento de tasa autorizada",
+    "text": "Resolución MAE-SEEPGN-2026-1298-RM aprobó subir el límite a 1.500 BPPD. Operando a 51 Hz: +88 BPPD, de 1.199 a 1.287 BPPD."
+   },
+   {
+    "tag": "Alerta",
+    "title": "SB-2 · falla de ESP",
+    "text": "Falla fase-tierra con desbalance de fase y bajo aislamiento. Pozo apagado, en diseño y selección de la nueva bomba (workover pendiente)."
+   },
+   {
+    "tag": "Alerta",
+    "title": "SB-3 · bajo aislamiento",
+    "text": "Unidades con bajo aislamiento asociado a desbalance de fase. Hay 2 pozos apagados por falla ESP (B12 y B2)."
+   },
+   {
+    "tag": "Campo",
+    "title": "Información enviada al MAE",
+    "text": "Se remitió producción, capacidad, número de tanques y autonomía de almacenamiento para resguardar la continuidad y seguridad de las operaciones."
+   },
+   {
+    "tag": "Campo",
+    "title": "Licitación tratamiento químico",
+    "text": "Bases de licitación del programa de tratamiento químico para pozos inyectores: avance global 89 %."
+   }
+  ],
+  "comments": {
+   "water": "Agua producida 28.957 BWPD vs reinyectada 28.959 BWPD. Sólidos, aceite y salinidad estables; la presión de inyección mostró tendencia a la baja.",
+   "lift": "Equipos con parámetros eléctricos estables. SB-2 con falla de ESP (apagado) y SB-3 con bajo aislamiento por desbalance de fase. Hay 2 pozos apagados por falla ESP (B12 y B2).",
+   "delivery": "BSW promedio en Sansahuari 0,360 %; entregas promedio 4.136 BOPD.",
+   "gas": "Consumo de energía 505,8 Mscf (72,26 Mscf/d), todo en la planta de tratamiento. Microturbina fuera de servicio por problemas del compresor.",
+   "losses": "Pérdidas en B2 no recuperables por falla de ESP (pendiente workover)."
+  }
+ },
+ "2026-10-30_2026-11-05": {
+  "notes": [
+   {
+    "tag": "Alerta",
+    "title": "B2 · apagado por falla del cable de potencia",
+    "text": "Falla del cable de potencia de fondo; requiere pulling para cambiar el ensamblaje ESP (163 BOPD no recuperables). Compensación: B14H +15 y B16H +21 BOPD, neto +36 BOPD."
+   },
+   {
+    "tag": "Pozo",
+    "title": "B14H y B16H · aumento de frecuencia",
+    "text": "B14H de 108 a 114 Hz y B16H de 75 a 80 Hz: +35 BOPD netos, compensando la pérdida de B2 (164 BOPD). Promedio del campo: 4.042 BOPD."
+   },
+   {
+    "tag": "Pozo",
+    "title": "N20 · aprobación MAE",
+    "text": "Resolución MAE-SEEPGN-2026-1298-RM: tasa autorizada de 1.200 a 1.500 BOPD."
+   },
+   {
+    "tag": "Pozo",
+    "title": "N21 · aprobación MAE",
+    "text": "Resolución MAE-SEEPGN-2026-1304-RM: tasa autorizada de 800 a 900 BOPD."
+   },
+   {
+    "tag": "Campo",
+    "title": "B2 · diseño de ESP y licitación",
+    "text": "Diseño de ESP presentado (fluido promedio 1.200 BFPD). Bases de licitación para alquiler de ESP enviadas."
+   },
+   {
+    "tag": "Campo",
+    "title": "Servicios",
+    "text": "Matrices de evaluación enviadas para transporte de agua en cisterna y camiones de vacío de apoyo a las operaciones del campo."
+   }
+  ],
+  "comments": {
+   "water": "200.541 bbl de agua tratada y reinyectada; presiones de cabeza estables, sin incremento. Se presentó propuesta de tratamiento de sólidos para los inyectores.",
+   "lift": "B2: falla eléctrica (desbalance de carga) tras 1.309 días. B3: desbalance de carga, estable. Resto estable.",
+   "delivery": "BSW promedio 0,322 %; entregas brutas 4.045 BOPD según el reporte.",
+   "gas": "Consumo de energía 514 Mscf (73 Mscf/d), todo en la planta de tratamiento. Microturbina 0, fuera de servicio (problemas del compresor).",
+   "losses": "B2: apagado por falla del cable de potencia de fondo; se requiere pulling para reemplazar el ensamblaje ESP. Compensación B14H +15 y B16H +21 BOPD (+36 BOPD)."
+  },
+  "areas": {}
+ }
+}

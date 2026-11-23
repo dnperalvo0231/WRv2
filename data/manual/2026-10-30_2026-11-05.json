@@ -1,0 +1,263 @@
+{
+ "id": "2026-10-30_2026-11-05",
+ "start": "2026-10-30",
+ "end": "2026-11-05",
+ "days": [
+  {
+   "date": "2026-10-30",
+   "oil": 4006,
+   "water": 28069,
+   "fluid": 32076,
+   "gas": 1113,
+   "wc": 87.51,
+   "deliv": 4025,
+   "bsw": null
+  },
+  {
+   "date": "2026-10-31",
+   "oil": 4020,
+   "water": 28401,
+   "fluid": 32421,
+   "gas": 1122,
+   "wc": 87.6,
+   "deliv": 4008,
+   "bsw": null
+  },
+  {
+   "date": "2026-11-01",
+   "oil": 4023,
+   "water": 28423,
+   "fluid": 32446,
+   "gas": 1122,
+   "wc": 87.6,
+   "deliv": 4002,
+   "bsw": null
+  },
+  {
+   "date": "2026-11-02",
+   "oil": 4042,
+   "water": 28897,
+   "fluid": 32938,
+   "gas": 1139,
+   "wc": 87.73,
+   "deliv": 4011,
+   "bsw": null
+  },
+  {
+   "date": "2026-11-03",
+   "oil": 4044,
+   "water": 28944,
+   "fluid": 32989,
+   "gas": 1140,
+   "wc": 87.74,
+   "deliv": 4059,
+   "bsw": null
+  },
+  {
+   "date": "2026-11-04",
+   "oil": 4042,
+   "water": 28924,
+   "fluid": 32965,
+   "gas": 1140,
+   "wc": 87.74,
+   "deliv": 4043,
+   "bsw": null
+  },
+  {
+   "date": "2026-11-05",
+   "oil": 4040,
+   "water": 28915,
+   "fluid": 32955,
+   "gas": 1140,
+   "wc": 87.74,
+   "deliv": 4073,
+   "bsw": null
+  }
+ ],
+ "avg": {
+  "oil": 4031,
+  "water": 28653,
+  "fluid": 32684,
+  "gas": 1131,
+  "wc": 87.67,
+  "deliv": 4032,
+  "bsw": 0.322
+ },
+ "rld": [
+  {
+   "well": "B8",
+   "pump": "FLEX47SXDH6/39/175/5006",
+   "days": 2538,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B12",
+   "pump": "FLEX47XH6/46/175/5104",
+   "days": 2480,
+   "target": 900,
+   "status": "shutdown"
+  },
+  {
+   "well": "B5",
+   "pump": "FLEX47/59/175/5260",
+   "days": 1933,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B15H",
+   "pump": "FLEX80 SSD XH6/88/350/5106",
+   "days": 1928,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B2",
+   "pump": "DN1750/218/180/7420",
+   "days": 1309,
+   "target": 1200,
+   "status": "shutdown"
+  },
+  {
+   "well": "B6",
+   "pump": "FLEX 17.5H6/232/125/8005",
+   "days": 1302,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B3",
+   "pump": "P35/156/165/6002",
+   "days": 1295,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B9 RE",
+   "pump": "FLEX 7ER/270/150/7089",
+   "days": 877,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B7",
+   "pump": "FLEX 47 XH6 SSD/79/250/7000",
+   "days": 819,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B13",
+   "pump": "FLEX 7ER/270/175/8702",
+   "days": 784,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B14H",
+   "pump": "E8000 SSD XH6/44/250/5404",
+   "days": 637,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "A1",
+   "pump": "30-225-RHBC-34-5-2-1",
+   "days": 541,
+   "target": 900,
+   "status": "ok"
+  },
+  {
+   "well": "B4",
+   "pump": "FLEX7ER/198/150/7680",
+   "days": 470,
+   "target": 1200,
+   "status": "upthrust"
+  },
+  {
+   "well": "B18",
+   "pump": "FLEX 7ER/270/150/7780",
+   "days": 375,
+   "target": 1200,
+   "status": "upthrust"
+  },
+  {
+   "well": "B17",
+   "pump": "E3000/192/250/7539",
+   "days": 370,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "B19",
+   "pump": "FLEX ER/268/150/7530",
+   "days": 340,
+   "target": 800,
+   "status": "upthrust"
+  },
+  {
+   "well": "B16H",
+   "pump": "E 8000 SSD XH6/88/425/5151",
+   "days": 300,
+   "target": 1200,
+   "status": "ok"
+  },
+  {
+   "well": "N20",
+   "pump": "E2000 MX SSD 402/330/6868",
+   "days": 188,
+   "target": null,
+   "status": "ok"
+  },
+  {
+   "well": "N21",
+   "pump": "D1750N/351/240/7642",
+   "days": 65,
+   "target": null,
+   "status": "ok"
+  }
+ ],
+ "rldStats": {
+  "upthrust": 0.1875,
+  "downthrust": 0,
+  "inrange": 0.8125
+ },
+ "losses": [
+  {
+   "date": "2026-10-30",
+   "well": "SB-2 \"UI\"",
+   "rec": 0.0,
+   "nonrec": 163.52,
+   "note": "Awaiting WO"
+  }
+ ],
+ "injection": [],
+ "injSummary": {
+  "a10": {
+   "water": 14684,
+   "psi": 1988,
+   "sst": 44,
+   "oil": 33
+  },
+  "a11": {
+   "water": 13965,
+   "psi": 1910,
+   "sst": 44,
+   "oil": 33
+  },
+  "salinity": 12045
+ },
+ "gas": [],
+ "gasSummary": {
+  "fuel": 514.3,
+  "produced": 7916,
+  "flared": 7401.7,
+  "fuelPerDay": 73,
+  "fuelPct": 6.5,
+  "flaredPct": 93.5,
+  "microturbine": 0
+ },
+ "source": "pdf",
+ "partial": true
+}

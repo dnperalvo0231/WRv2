@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Singue · Weekly Operation Report</title>
+<meta name="description" content="Dashboard semanal de operaciones del Campo Singue — Gente Oil Ecuador">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4C22 22 14 32 14 42a18 18 0 0 0 36 0C50 32 42 22 32 4z' fill='%23ff8a1f'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+
+<main class="wrap">
+
+  <!-- ENCABEZADO -->
+  <header class="hero">
+    <img id="logo" class="logo" src="img/logo.png" alt="Gente Oil Ecuador" hidden>
+    <p class="eyebrow">Production Operation · Weekly</p>
+    <h1>Campo <span>Singue</span></h1>
+    <p class="sub">Weekly Operation Report · Gente Oil Ecuador</p>
+    <p class="sub" style="margin-top:6px"><a href="horizontal.html" style="color:#ffc065;font-weight:600">Ver versión horizontal (fondo blanco, 2 pestañas) →</a></p>
+    <div class="weekbar" id="weekbar" role="tablist" aria-label="Semana del reporte"></div>
+    <p class="range" id="range"></p>
+    <p class="partial" id="partial" hidden></p>
+  </header>
+
+  <!-- KPIs -->
+  <section class="kpis" id="kpis" aria-label="Indicadores de la semana"></section>
+
+  <!-- 1 · PRODUCCIÓN -->
+  <section class="card" id="sec-prod">
+    <div class="card-h"><span class="num">1</span><div><h2>Producción</h2><p>Promedios diarios de la semana</p></div></div>
+    <div class="pills" id="prodPills"></div>
+    <div class="chart h260"><canvas id="cProd"></canvas></div>
+    <details class="tbl"><summary>Ver tabla diaria</summary><div class="scroll"><table id="tProd"></table></div></details>
+
+    <div class="split">
+      <div>
+        <h3>Cumplimiento del mes</h3>
+        <div class="gauge"><canvas id="cGauge"></canvas><div class="gauge-c" id="gaugeC"></div></div>
+        <p class="mini" id="gaugeT"></p>
+      </div>
+      <div>
+        <h3>Cumplimiento por mes · 2026</h3>
+        <div class="months" id="months"></div>
+        <p class="mini">Producción real vs plan vigente. Toca un mes para ver el detalle.</p>
+        <p class="mini strong" id="monthDetail"></p>
+      </div>
+    </div>
+
+    <h3>Producción vs plan</h3>
+    <div class="pills" id="fcPills"></div>
+    <div class="chart h260"><canvas id="cForecast"></canvas></div>
+    <p class="mini">Toca las leyendas para encender o apagar series.</p>
+
+    <h3>Serie diaria 2026</h3>
+    <div class="pills" id="dayPills"></div>
+    <div class="chart h240"><canvas id="cDaily"></canvas></div>
+    <p class="insight" id="dailyInsight"></p>
+
+    <div class="slot" data-slot="produccion_anual" data-title="Producción del año" data-hint="Gráfico de OFM · producción en el lapso del año"></div>
+  </section>
+
+  <!-- 2 · AGUA -->
+  <section class="card" id="sec-water">
+    <div class="card-h"><span class="num">2</span><div><h2>Producción e inyección de agua</h2><p>Pozos inyectores · formación Tiyuyacu</p></div></div>
+    <div class="wells" id="wells"></div>
+    <div class="chart h220" id="waterChartBox"><canvas id="cWater"></canvas></div>
+    <p class="mini" id="waterNote"></p>
+    <div class="slot" data-slot="presion_agua" data-title="Presión de inyección de agua" data-hint="Gráfico de OFM · presión de agua"></div>
+  </section>
+
+  <!-- 3 · GAS -->
+  <section class="card" id="sec-gas">
+    <div class="card-h"><span class="num">3</span><div><h2>Gas combustible</h2><p>Generación de energía vs gas quemado</p></div></div>
+    <div class="split gasrow">
+      <div class="donut"><canvas id="cGas"></canvas><div class="donut-c" id="gasC"></div></div>
+      <div class="gasinfo" id="gasInfo"></div>
+    </div>
+    <div class="chart h200" id="gasChartBox"><canvas id="cGasDay"></canvas></div>
+  </section>
+
+  <!-- 4 · ENTREGA -->
+  <section class="card" id="sec-deliv">
+    <div class="card-h"><span class="num">4</span><div><h2>Entrega · Sansahuari (SSHH)</h2><p>Petróleo entregado y BSW</p></div></div>
+    <div class="split dv" id="delivKpi"></div>
+    <div class="chart h220"><canvas id="cDeliv"></canvas></div>
+    <div class="slot" data-slot="transferencia" data-title="Transferencia / entregas" data-hint="Gráfico de OFM · lo transferido"></div>
+  </section>
+
+  <!-- LEVANTAMIENTO ARTIFICIAL -->
+  <section class="card" id="sec-lift">
+    <div class="card-h"><span class="num">⚙</span><div><h2>Levantamiento artificial</h2><p>Run life (días) por pozo vs objetivo</p></div></div>
+    <div class="split lift">
+      <div class="donut sm"><canvas id="cLift"></canvas><div class="donut-c" id="liftC"></div></div>
+      <div class="liftinfo" id="liftInfo"></div>
+    </div>
+    <div class="pills" id="liftPills"></div>
+    <div class="bars" id="bars"></div>
+    <p class="mini">La marca vertical indica el run life objetivo de cada pozo.</p>
+  </section>
+
+  <!-- PÉRDIDAS -->
+  <section class="card" id="sec-loss">
+    <div class="card-h"><span class="num">!</span><div><h2>Pérdidas de producción</h2><p>Recuperables y no recuperables (BOPD)</p></div></div>
+    <div id="losses"></div>
+  </section>
+
+  <!-- NOVEDADES -->
+  <section class="card" id="sec-notes">
+    <div class="card-h"><span class="num">★</span><div><h2>Novedades de la semana</h2><p>Resumen operativo</p></div></div>
+    <div class="notes" id="notes"></div>
+  </section>
+
+  <footer class="foot">
+    <p id="foot"></p>
+    <p>Fuente: Excel semanal WOR · gráficos OFM anexados a mano · Gente Oil Ecuador</p>
+  </footer>
+</main>
+
+<div class="lightbox" id="lb" hidden><button aria-label="Cerrar">✕</button><img alt=""></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="data/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

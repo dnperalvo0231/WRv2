@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Singue · Weekly Operation Report (horizontal)</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4C22 22 14 32 14 42a18 18 0 0 0 36 0C50 32 42 22 32 4z' fill='%23e8710a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/horizontal.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="top">
+    <div class="logo" id="logoBox"><img id="logo" src="img/logo.png" alt="" hidden><span id="logoTxt">LOGO</span></div>
+    <div class="ttl">
+      <h1>WEEKLY OPERATION REPORT</h1>
+      <p id="range"></p>
+    </div>
+    <div class="meta">
+      <p>Weekly Meeting Gente Oil Ecuador · Campo Singue</p>
+      <div class="ctrl">
+        <button id="prev" aria-label="Semana anterior">‹</button>
+        <select id="weekSel" aria-label="Semana"></select>
+        <button id="next" aria-label="Semana siguiente">›</button>
+        <button id="print" class="ghost">Imprimir</button>
+        <a class="ghost" href="index.html">Versión vertical</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="areas" id="areas"></div>
+  <p class="partial" id="partial" hidden></p>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-1" aria-controls="p1" aria-selected="true"><b>1</b> Producción y cumplimiento</button>
+    <button role="tab" id="tab-2" aria-controls="p2" aria-selected="false"><b>2</b> Instalaciones, pozos y novedades</button>
+  </nav>
+
+  <!-- ================= PESTAÑA 1 ================= -->
+  <section class="panel" id="p1" role="tabpanel" aria-labelledby="tab-1">
+    <div class="grid">
+      <div class="box c7">
+        <div class="bar">Production operation · Weekly Singue Field</div>
+        <div class="scroll"><table class="data" id="tProd"></table></div>
+      </div>
+      <div class="c5 kpis" id="kpis"></div>
+
+      <div class="box c7">
+        <div class="bar">Producción 2026 · serie diaria</div>
+        <div class="tools"><div class="pills" id="trendSeries"></div><div class="pills" id="trendRange"></div></div>
+        <div class="chart" style="height:270px"><canvas id="cTrend"></canvas></div>
+        <p class="note" id="trendNote"></p>
+      </div>
+      <div class="box c5">
+        <div class="bar">Production forecast 2026 · plan vigente (act. sep-2026)</div>
+        <div class="chart" style="height:230px"><canvas id="cForecast"></canvas></div>
+        <p class="note" id="fcNote"></p>
+        <div class="months" id="months"></div>
+        <p class="note strong" id="monthDetail"></p>
+      </div>
+
+      <div class="box c5">
+        <div class="bar loss">1 · Pérdidas reportadas</div>
+        <div id="losses"></div>
+      </div>
+      <div class="box c7">
+        <div class="bar">Gráfico OFM · producción del año</div>
+        <div class="slot" data-slot="produccion_anual" data-title="Producción del año" data-hint="Gráfico de OFM · producción en el lapso del año"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PESTAÑA 2 ================= -->
+  <section class="panel" id="p2" role="tabpanel" aria-labelledby="tab-2" hidden>
+    <div class="grid">
+      <div class="box c6">
+        <div class="bar">2 · Water production</div>
+        <p class="txt" id="waterTxt"></p>
+        <div class="scroll"><table class="data" id="tWater"></table></div>
+        <div class="chart" style="height:190px" id="waterBox"><canvas id="cWater"></canvas></div>
+        <div class="slot" data-slot="presion_agua" data-title="Presión de inyección de agua" data-hint="Gráfico de OFM · presión de agua"></div>
+      </div>
+
+      <div class="box c6">
+        <div class="bar">3 · Fuel gas (generation)</div>
+        <div class="row2">
+          <div class="donut"><canvas id="cGas"></canvas><div class="donut-c" id="gasC"></div></div>
+          <div class="stats" id="gasInfo"></div>
+        </div>
+        <p class="txt" id="gasTxt"></p>
+        <div class="chart" style="height:160px" id="gasBox"><canvas id="cGasDay"></canvas></div>
+      </div>
+
+      <div class="box c6">
+        <div class="bar">4 · Delivery (Sansahuari)</div>
+        <p class="txt" id="delivTxt"></p>
+        <div class="stats cols" id="delivKpi"></div>
+        <div class="chart" style="height:190px"><canvas id="cDeliv"></canvas></div>
+        <div class="slot" data-slot="transferencia" data-title="Transferencia / entregas" data-hint="Gráfico de OFM · lo transferido"></div>
+      </div>
+
+      <div class="box c6">
+        <div class="bar">Artificial lift · Run life (days)</div>
+        <div class="row2">
+          <div class="donut sm"><canvas id="cLift"></canvas><div class="donut-c" id="liftC"></div></div>
+          <div class="stats" id="liftInfo"></div>
+        </div>
+        <div class="pills" id="liftPills"></div>
+        <div class="bars" id="bars"></div>
+        <p class="note">La marca vertical es el run life objetivo. <span id="liftTxt"></span></p>
+      </div>
+
+      <div class="box c12">
+        <div class="bar">5 · Singue wells &amp; 6 · Singue field</div>
+        <div class="notes" id="notes"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot"><span id="foot"></span><span>Fuente: Excel semanal WOR · gráficos OFM anexados a mano · Gente Oil Ecuador</span></footer>
+</div>
+
+<div class="lightbox" id="lb" hidden><button aria-label="Cerrar">✕</button><img alt=""></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="data/data.js"></script>
+<script src="assets/horizontal.js"></script>
+</body>
+</html>
